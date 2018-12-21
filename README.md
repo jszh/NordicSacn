@@ -1,4 +1,4 @@
-Nordic Net Scan
+# Nordic Net Scan
 
 This project scans the available hosts in nordic countries with the `nmap` tool using IP addresses from the IP2Location LITE data.
 
