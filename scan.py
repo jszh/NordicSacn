@@ -8,8 +8,10 @@ def convert(x):
 
 filename = 'nordic_ip_geoloc.csv'
 index_from = 40001
-index_to = 46666#69934
+index_to = 42222#69934
 
+
+f = open("host_%d_%d.txt" % (index_from, index_to), 'w')
 data = pd.read_csv(filename)
 print(data)
 total_host = []
@@ -36,6 +38,7 @@ for index in range(index_from, index_to + 1):
             print("result=", result)
     total_host.append(host)
 
-with open("host_%d_%d.txt" % (index_from, index_to), 'w') as f:
-    for host in total_host:
-        f.write("%d\n"%host)
+    f.write("%d\n"%host)
+
+f.close()
+
