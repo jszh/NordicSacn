@@ -7,8 +7,8 @@ def convert(x):
     return "%d.%d.%d.%d" % (x >> 24, (x >> 16) & ((1 << 8) - 1), (x >> 8) & ((1 << 8) - 1), x & ((1 << 8) - 1))
 
 filename = 'nordic_ip_geoloc.csv'
-index_from = 40001
-index_to = 42222#69934
+index_from = 0
+index_to = 69934
 
 
 f = open("host_%d_%d.txt" % (index_from, index_to), 'w')
